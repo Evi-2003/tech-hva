@@ -1,0 +1,13 @@
+body {
+  display: flex;
+  flex-direction: column;
+}
+#duckImage {
+  object-fit: cover;
+  object-position: center;
+  height: 100svh;
+  width: 100vw;
+}
+button:hover {
+  background-color: #ed6d68;
+}
