@@ -1,10 +1,12 @@
 const image = document.querySelector("#duckImage");
 const body = document.querySelector("body");
+
 async function getDuck() {
-  const ducksFromApi = await fetch(
-    "https://random-d.uk/api/random?format=json"
-  );
-  const duckJson = await ducksFromApi.json();
+  const fetchUrl =
+    "https://corsproxy.io?" +
+    encodeURIComponent("https://random-d.uk/api/v2/random?format=json");
+  const response = await fetch(fetchUrl);
+  const duckJson = await response.json();
   image.src = duckJson.url;
   return duckJson.url;
 }
