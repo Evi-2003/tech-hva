@@ -17,3 +17,4 @@ async function setDuck() {
 
 getDuck();
 body.addEventListener("keypress", setDuck);
+body.addEventListener("click", setDuck);
